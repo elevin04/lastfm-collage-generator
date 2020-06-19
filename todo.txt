@@ -1,0 +1,10 @@
+TODO
+----
+1. Understand each line of this program (easy enough I guess /s)
+2. Add comments explaining each segment of the program
+3. Add the ability to add more than the (currently) hard-coded 9 picture artist
+limit for the collage (e.g., let the user be able to choose the amount of
+artists displayed in his/her collage)
+4. Add a fully functional (simple, one task) GUI for the program
+5. Make sure it is cross-platform compatible
+6. Add file that installs all dependencies when run
