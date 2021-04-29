@@ -8,6 +8,20 @@ import urllib
 import os
 import glob
 
+# api
+try:
+    my_file = open("api")
+    my_file.close()
+except IOError:
+    key = input('Add your Last.fm API key: ')
+    my_file = open("api", "w+")
+    my_file.write(key)
+    my_file.close()
+
+my_file = open("api")
+key = my_file.readline()
+my_file.close()
+
 # initializes cols and rows
 cols = 0
 rows = 0
@@ -101,7 +115,7 @@ body = {
     # 'method': "user.gettopalbums",
     'method': meth,
     'user': usr,
-    'api_key': 'XXXXXXXXXXXX', # <-- Last.fm Api Key Here
+    'api_key': key, # <-- Last.fm Api Key Here
     'limit': (cols*rows),
     'period': str_time,
     'format': 'json'
